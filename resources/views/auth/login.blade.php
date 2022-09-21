@@ -13,49 +13,6 @@
 
 
                         <div class="row mb-3">
-                            <label for="position" class="col-md-4 col-form-label text-md-end">{{ __('Position') }}</label>
-
-                            <div class="col-md-6">
-                                <select id="position" type="position" class="form-control @error('position') is-invalid @enderror" name="position" value="{{ old('position') }}" required autocomplete="position">
-                                    <option>IT</option>
-                    
-                                    <option>Talento Humano </option>
-                            
-                                    <option>Audio</option>
-                                
-
-                                @error('position')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                </select>
-                        </div>
-                    </div>
-
-
-
-                    <div class="row mb-3">
-                        <label for="employee_number" class="col-md-4 col-form-label text-md-end">{{ __('Employee Number') }}</label>
-
-                        <div class="col-md-6">
-                            <input id="employee_number" type="employee_number" class="form-control @error('employee_number') is-invalid @enderror" name="employee_number" value="{{ old('employee_number') }}" required autocomplete="employee_number">
-
-                            @error('employee_number')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-
-
-
-                    
-
-
-
-                        <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
@@ -68,9 +25,6 @@
                                 @enderror
                             </div>
                         </div>
-
-
-    
 
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>

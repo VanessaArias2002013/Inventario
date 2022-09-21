@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource("departamentos", "DepartamentosController")->parameters(["departamentos"=>"departamento"]);
+
+
+Route::resource("dispositivos", "DispositivosController")->parameters(["dispositivos"=>"dispositivo"]);
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
