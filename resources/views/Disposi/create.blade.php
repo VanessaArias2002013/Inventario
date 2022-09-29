@@ -1,35 +1,36 @@
 @extends("layouts.app")
 @section("titulo", "Registrar Dispositivos")
 @section("content")
-    <div class="row">
-        <div class="col-12">
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <h1>Registrar Dispositivos</h1>
+  </head>
+  <body>
+   
+    <div class="container">
+        <div class="row">
+            <div  class="col-9">
+                <div class="row gy-5">
+                    <div class="p-3 border bg-light">
+
             <form method="POST" action="{{route("dispositivos.store")}}">
                 @csrf
-                <div class="col-md-6">
+                <div class="form-group">
                     <label class="label">Marca</label>
-                    <input required autocomplete="off" name="marca" class="form-control"
-                           type="text" placeholder="Marca">
+                    <input required autocomplete="off" name="marca" class="form-control form-control-lg" type="text" placeholder="Marca" aria-label="Marca">
+                   
                 </div>
 
-
-                <div class="row mb-4">
-                    <label for="marca" class="col-md-4 col-form-label text-md-end">{{ __('Marca') }}</label>
-
-                    <div class="col-md-6">
-                        <input id="marca" type="text" class="form-control @error('marca') is-invalid @enderror" name="marca" value="{{ old('marca') }}" required autocomplete="marca" autofocus>
-
-                        @error('marca')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="row mb-4">
+                <div class="form-group">
                     <label class="label">Modelo</label>
-                    <input required autocomplete="off" name="modelo" class="form-control"
-                           type="text" placeholder="Modelo">
+                    <input required autocomplete="off" name="modelo" class="form-control form-control-lg" type="text" placeholder="Modelo" aria-label="Modelo">
+                    
                 </div>
 
                 
@@ -38,4 +39,8 @@
             </form>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+        
+</body>
 @endsection
+</html>

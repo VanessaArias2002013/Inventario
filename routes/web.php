@@ -19,9 +19,9 @@ Route::get('/', function () {
 
 Route::resource("departamentos", "DepartamentosController")->parameters(["departamentos"=>"departamento"]);
 
-
 Route::resource("dispositivos", "DispositivosController")->parameters(["dispositivos"=>"dispositivo"]);
 
+Route::resource("proveedores", "ProveedorsController")->parameters(["proveedores"=>"proveedor"]);
 
 Auth::routes();
 
